@@ -31,7 +31,7 @@ setup(
     install_requires=[
         'dataclasses;python_version<"3.7"',
         'conf',
-        'git+https://github.com/openskynetwork/opensky-api.git@master#egg=opensky_api&subdirectory=python',
+        'opensky_api',
         'influxdb',
         'requests',
         'apscheduler',

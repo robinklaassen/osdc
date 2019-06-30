@@ -2,6 +2,11 @@ from datetime import datetime
 
 
 def map_to_points(result: dict) -> list:
+    """
+    Map an OpenSky result dictionary to a list of InfluxDB measurement points.
+    :param result: dictionary of type 'OpenSkyStates' (see OpenSky docs)
+    :return: list of InfluxDB measurement points.
+    """
     ts: datetime = result.get('timestamp')
     states: list = result.get('states')
 

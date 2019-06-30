@@ -13,6 +13,12 @@ _logger = logging.getLogger(__name__)
 
 
 def create_client() -> InfluxDBClient:
+    """
+    Create a client for the Influx database.
+    Includes connection test and database and retention policy creation.
+
+    :return: an instance of InfluxDBClient.
+    """
     client = InfluxDBClient(
         host=INFLUXDB_HOST,
         port=INFLUXDB_PORT,
